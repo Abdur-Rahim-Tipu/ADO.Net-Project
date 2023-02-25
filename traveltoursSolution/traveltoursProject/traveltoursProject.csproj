@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{455AD796-B988-4E9E-8000-DF916ACC8A07}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>traveltoursProject</RootNamespace>
+    <AssemblyName>traveltoursProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CreateConnection.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CrystalReport3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CrystalReport4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CrystalReport5.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport5.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FormWP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormWP.Designer.cs">
+      <DependentUpon>FormWP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GPForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\GPForm.Designer.cs">
+      <DependentUpon>GPForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SPForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SPForm.Designer.cs">
+      <DependentUpon>SPForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SubRep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SubRep.Designer.cs">
+      <DependentUpon>SubRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TourePackage\TourePackageDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TourePackage\TourePackageDelete.Designer.cs">
+      <DependentUpon>TourePackageDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TourePackage\TourePackageInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TourePackage\TourePackageInsert.Designer.cs">
+      <DependentUpon>TourePackageInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TourePackage\TourePackageUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TourePackage\TourePackageUpdate.Designer.cs">
+      <DependentUpon>TourePackageUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TourePackage\TourePackageView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TourePackage\TourePackageView.Designer.cs">
+      <DependentUpon>TourePackageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tourists\FeatureInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tourists\FeatureInsert.Designer.cs">
+      <DependentUpon>FeatureInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tourists\TouristInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tourists\TouristInsert.Designer.cs">
+      <DependentUpon>TouristInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tourists\TouristView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tourists\TouristView.Designer.cs">
+      <DependentUpon>TouristView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Travelagent\TravelagentDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Travelagent\TravelagentDelete.Designer.cs">
+      <DependentUpon>TravelagentDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Travelagent\TravelagentUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Travelagent\TravelagentUpdate.Designer.cs">
+      <DependentUpon>TravelagentUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Travelagent\TravelagentInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Travelagent\TravelagentInsert.Designer.cs">
+      <DependentUpon>TravelagentInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Travelagent\TravelagentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Travelagent\TravelagentView.Designer.cs">
+      <DependentUpon>TravelagentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="traveltoursDbDataSet.cs">
+      <DependentUpon>traveltoursDbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="traveltoursDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>traveltoursDbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="traveltoursDbDataSet1.cs">
+      <DependentUpon>traveltoursDbDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="traveltoursDbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>traveltoursDbDataSet1.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Reports\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReport3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReport4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport4.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReport5.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport5.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FormWP.resx">
+      <DependentUpon>FormWP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GPForm.resx">
+      <DependentUpon>GPForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SPForm.resx">
+      <DependentUpon>SPForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SubRep.resx">
+      <DependentUpon>SubRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TourePackage\TourePackageDelete.resx">
+      <DependentUpon>TourePackageDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TourePackage\TourePackageInsert.resx">
+      <DependentUpon>TourePackageInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TourePackage\TourePackageUpdate.resx">
+      <DependentUpon>TourePackageUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TourePackage\TourePackageView.resx">
+      <DependentUpon>TourePackageView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tourists\FeatureInsert.resx">
+      <DependentUpon>FeatureInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tourists\TouristInsert.resx">
+      <DependentUpon>TouristInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tourists\TouristView.resx">
+      <DependentUpon>TouristView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Travelagent\TravelagentDelete.resx">
+      <DependentUpon>TravelagentDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Travelagent\TravelagentUpdate.resx">
+      <DependentUpon>TravelagentUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Travelagent\TravelagentInsert.resx">
+      <DependentUpon>TravelagentInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Travelagent\TravelagentView.resx">
+      <DependentUpon>TravelagentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="traveltoursDbDataSet.xsc">
+      <DependentUpon>traveltoursDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="traveltoursDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>traveltoursDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="traveltoursDbDataSet.xss">
+      <DependentUpon>traveltoursDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="traveltoursDbDataSet1.xsc">
+      <DependentUpon>traveltoursDbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="traveltoursDbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>traveltoursDbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="traveltoursDbDataSet1.xss">
+      <DependentUpon>traveltoursDbDataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pictures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="traveltoursDb.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="traveltoursDb_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>traveltoursDb.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
